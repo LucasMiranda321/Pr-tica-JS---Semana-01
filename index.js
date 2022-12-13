@@ -1,24 +1,11 @@
-//Aula 05 - Operadores
+//Aula 06 - Entrada de Dados
 
 const prompt = require('prompt-sync')();
 
-a = 1;
-b = 2;
-c = 3;
-d = "3";
-e = false;
-f = true;
+modelo = prompt("Digite o modelo do seu veículo: ");
+km = parseFloat(prompt("Digite a distância em km: "));
+comb = parseFloat(prompt("Digite quantos litros de combustível foram gastos: "));
 
-op_1 = (a + b ** c - c % 2);
-op_2 = (b * (c / a - a));
-op_3 = ((c == d) != e);
-op_4 = ((b >= a) == f);
-op_5 = ((c !== d) && (b % 1 == 0));
-op_6 = (e || (b > c || f));
+consumo = km / comb;
 
-console.log("Operação 1: ", op_1);
-console.log("Operação 2: ", op_2);
-console.log("Operação 3: ", op_3);
-console.log("Operação 4: ", op_4);
-console.log("Operação 5: ", op_5);
-console.log("Operação 6: ", op_6);
+console.log("O consumo do carro", modelo, "é de", consumo, "km/L");

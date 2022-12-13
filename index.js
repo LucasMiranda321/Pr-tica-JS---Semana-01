@@ -1,19 +1,26 @@
-//Aula 07 - Comandos de Decisão - Questão 02
+//Aula 07 - Comandos de Decisão - Questão 03
 
 const prompt = require('prompt-sync')();
 
-nome = prompt("Digite o nome do aluno: ");
-n1 = parseFloat(prompt("Digite a primeira nota: "));
-n2 = parseFloat(prompt("Digite a segunda nota: "));
-n3 = parseFloat(prompt("Digite a terceira nota: "));
+cliente = prompt("Digite o nome do cliente: ");
+compra = parseFloat(prompt("Digite o valor da compra: "));
 
-media = (n1 + n2 + n3) / 3;
-
-console.log("\nMédia: ", media);
-if(media >= 6){
-  console.log("Resultado: Aprovado!");
-} else if(media <= 3){
-  console.log("Resultado: Reprovado!");
-} else{
-  console.log("Resultado: Recuperação!");
+if(compra < 1000){
+  desconto = compra * 0.05;
+  console.log("\nDesconto de 5%!");
+  console.log("Valor do desconto: ", desconto);
+  
+} else if(compra >= 5000){
+  desconto = compra * 0.15;
+  console.log("\nDesconto de 15%!");
+  console.log("Valor do desconto: ", desconto);
+  
+}else{
+  desconto = compra * 0.10;
+  console.log("\nDesconto de 10%!");
+  console.log("Valor do desconto: ", desconto);
 }
+
+valorliquido = compra - desconto;
+
+console.log("O valor da compra com desconto será de: ", valorliquido);

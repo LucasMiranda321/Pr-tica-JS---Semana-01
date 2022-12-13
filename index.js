@@ -1,4 +1,4 @@
-//Aula 04 - Sintaxe e tipos de Dados //
+//Aula 04 - Sintaxe e tipos de Dados 
 
 const prompt = require('prompt-sync')();
 

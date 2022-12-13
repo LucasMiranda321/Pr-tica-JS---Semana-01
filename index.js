@@ -1,20 +1,24 @@
-//Aula 04 - Sintaxe e tipos de Dados 
+//Aula 05 - Operadores
 
 const prompt = require('prompt-sync')();
 
-idade = 20;
-altura = 1.75;
-nome = "José";
-pagou = true;
+a = 1;
+b = 2;
+c = 3;
+d = "3";
+e = false;
+f = true;
 
-console.log("Os valores atribuídos às variáveis são: ");
-console.log("Idade: ", idade);
-console.log("Altura: ", altura);
-console.log("Nome: ", nome);
-console.log("Pagou: ", pagou);
+op_1 = (a + b ** c - c % 2);
+op_2 = (b * (c / a - a));
+op_3 = ((c == d) != e);
+op_4 = ((b >= a) == f);
+op_5 = ((c !== d) && (b % 1 == 0));
+op_6 = (e || (b > c || f));
 
-console.log("\nOs tipos das variáveis são: ");
-console.log("idade: ", typeof(idade));
-console.log("altura: ", typeof(altura));
-console.log("nome: ", typeof(nome));
-console.log("pagou: ", typeof(pagou));
+console.log("Operação 1: ", op_1);
+console.log("Operação 2: ", op_2);
+console.log("Operação 3: ", op_3);
+console.log("Operação 4: ", op_4);
+console.log("Operação 5: ", op_5);
+console.log("Operação 6: ", op_6);

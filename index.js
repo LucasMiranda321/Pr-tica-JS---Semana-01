@@ -1,11 +1,17 @@
-//Aula 06 - Entrada de Dados
+//Aula 07 - Comandos de Decisão - Questão 01
 
 const prompt = require('prompt-sync')();
 
-modelo = prompt("Digite o modelo do seu veículo: ");
-km = parseFloat(prompt("Digite a distância em km: "));
-comb = parseFloat(prompt("Digite quantos litros de combustível foram gastos: "));
+nome = prompt("Digite o nome do aluno: ");
+n1 = parseFloat(prompt("Digite a primeira nota: "));
+n2 = parseFloat(prompt("Digite a segunda nota: "));
+n3 = parseFloat(prompt("Digite a terceira nota: "));
 
-consumo = km / comb;
+media = (n1 + n2 + n3) / 3;
 
-console.log("O consumo do carro", modelo, "é de", consumo, "km/L");
+console.log("\nMédia: ", media);
+if(media >= 6){
+  console.log("Resultado: Aprovado!");
+} else{
+  console.log("Resultado: Reprovado!");
+}

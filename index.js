@@ -1,26 +1,20 @@
-//Aula 07 - Comandos de Decisão - Questão 03
+//Aula 08 - Comandos de Decisão Aninhados - Questão 01
 
 const prompt = require('prompt-sync')();
 
-cliente = prompt("Digite o nome do cliente: ");
-compra = parseFloat(prompt("Digite o valor da compra: "));
+n1 = parseInt(prompt("Digite o primeiro número inteiro: "));
+n2 = parseInt(prompt("Digite o segundo número inteiro: "));
 
-if(compra < 1000){
-  desconto = compra * 0.05;
-  console.log("\nDesconto de 5%!");
-  console.log("Valor do desconto: ", desconto);
+if (n1 > 0 && n2 > 0){
   
-} else if(compra >= 5000){
-  desconto = compra * 0.15;
-  console.log("\nDesconto de 15%!");
-  console.log("Valor do desconto: ", desconto);
+  if(n1 % 2 == 0 && n2 % 2 == 0){
+    console.log("Os dois números são pares");
+  } else if ((n1 % 2 == 1) && (n2 % 2 == 1)){
+    console.log("Os dois números são impares");
+  }else{
+    console.log("Um par e um impar");
+  }
   
-}else{
-  desconto = compra * 0.10;
-  console.log("\nDesconto de 10%!");
-  console.log("Valor do desconto: ", desconto);
+} else{
+  console.log("Existe pelo menos um número 0 ou negativo");
 }
-
-valorliquido = compra - desconto;
-
-console.log("O valor da compra com desconto será de: ", valorliquido);

@@ -1,20 +1,21 @@
-//Aula 08 - Comandos de Decisão Aninhados - Questão 01
+//Aula 08 - Comandos de Decisão Aninhados - Questão 02
 
 const prompt = require('prompt-sync')();
 
-n1 = parseInt(prompt("Digite o primeiro número inteiro: "));
-n2 = parseInt(prompt("Digite o segundo número inteiro: "));
+a1 = parseInt(prompt("Digite o primeiro ângulo interno: "));
+a2 = parseInt(prompt("Digite o segundo ângulo interno: "));
+a3 = parseInt(prompt("Digite o terceiro ângulo interno: "));
 
-if (n1 > 0 && n2 > 0){
+if (a1 + a2 + a3 == 180){
   
-  if(n1 % 2 == 0 && n2 % 2 == 0){
-    console.log("Os dois números são pares");
-  } else if ((n1 % 2 == 1) && (n2 % 2 == 1)){
-    console.log("Os dois números são impares");
+  if(a1 < 90 && a2 < 90 && a3 < 90){
+    console.log("\nÉ um Triângulo Acutângulo");
+  } else if (a1 == 90 || a2 == 90 || a3 == 90){
+    console.log("\nÉ um Triângulo Retângulo");
   }else{
-    console.log("Um par e um impar");
+    console.log("\nÉ um Triângulo Obtusângulo");
   }
   
 } else{
-  console.log("Existe pelo menos um número 0 ou negativo");
+  console.log("\nNão é triângulo!");
 }
